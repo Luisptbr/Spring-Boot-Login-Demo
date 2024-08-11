@@ -10,8 +10,8 @@ import Alert from 'react-s-alert';
 
 class Login extends Component {
     componentDidMount() {
-        // If the OAuth2 login encounters an error, the user is redirected to the /login page with an error.
-        // Here we display the error and then remove the error query parameter from the location.
+        // Se o login do OAuth2 encontrar um erro, o usuário será redirecionado para a página /login com um erro.
+        // Aqui exibimos o erro e removemos o parâmetro de consulta de erro do local.
         if(this.props.location.state && this.props.location.state.error) {
             setTimeout(() => {
                 Alert.error(this.props.location.state.error, {
@@ -37,13 +37,13 @@ class Login extends Component {
         return (
             <div className="login-container">
                 <div className="login-content">
-                    <h1 className="login-title">Login to SpringSocial</h1>
+                    <h1 className="login-title">Login</h1>
                     <SocialLogin />
                     <div className="or-separator">
-                        <span className="or-text">OR</span>
+                        <span className="or-text">OU</span>
                     </div>
                     <LoginForm {...this.props} />
-                    <span className="signup-link">New user? <Link to="/signup">Sign up!</Link></span>
+                    <span className="signup-link">New user? <Link to="/signup">Cadastrar!</Link></span>
                 </div>
             </div>
         );
@@ -95,8 +95,8 @@ class LoginForm extends Component {
         login(loginRequest)
         .then(response => {
             localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-            Alert.success("You're successfully logged in!");
-            this.props.history.push("/");
+            Alert.success("Login Efetuado com sucesso!");
+            this.props.history.push("/inicio");
         }).catch(error => {
             Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
         });

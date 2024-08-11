@@ -193,7 +193,7 @@ a:hover {
 
 .form-control.invalid:focus, .form-control.invalid:active {
   box-shadow: 0 0 0 2px rgba(245,34,45,.2);        
-} 
+}
 
 .form-control[disabled], fieldset[disabled] .form-control {
   cursor: not-allowed;
@@ -208,10 +208,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/**
-  Or separator
-**/
-
+/* Or separator */
 .or-separator {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
@@ -226,7 +223,7 @@ a:hover {
   position: absolute;
   left: 46%;
   top: 0;
-  background: #fff;
+  background: var(--background-color);
   padding: 10px;
-  color: rgba(0,0,0,.45);
+  color: var(--text-color);
 }

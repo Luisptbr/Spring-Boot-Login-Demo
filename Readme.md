@@ -1,4 +1,4 @@
-# Spring Boot React OAuth2 Social Login Demo
+# Spring-Boot-Login-Demo
 
 ![App Screenshot](screenshot.png)
 
