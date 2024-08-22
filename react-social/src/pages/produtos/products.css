@@ -1,41 +1,196 @@
+/* CSS para o container geral dos produtos */
 .products-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-bottom: 10px;
-  }
-  
-  input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error-message {
-    color: red;
-  }
-  
+  display: flex;
+  justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  margin: 20px auto; /* Adiciona margem superior e inferior e centraliza horizontalmente */
+  max-width: 1200px; /* Define a largura máxima do container */
+  padding: 0 10px; /* Adiciona padding lateral */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* CSS para o conteúdo da página de produtos */
+.products-content {
+  display: flex;
+  justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* CSS para o formulário de produtos */
+.products-form {
+  background-color: #f8f9fa; /* Cor de fundo do formulário */
+  padding: 20px; /* Adiciona padding interno */
+  border-radius: 8px; /* Arredonda os cantos do formulário */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao formulário */
+}
+
+.products-form h2 {
+  text-align: center; /* Centraliza o texto do título */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+  color: #343a40; /* Cor do texto */
+}
+
+.products-form label {
+  display: block; /* Exibe o label como bloco */
+  margin-bottom: 15px; /* Adiciona margem inferior */
+  color: #495057; /* Cor do texto */
+}
+
+.products-form input {
+  width: 100%; /* Ocupa toda a largura do formulário */
+  padding: 12px; /* Adiciona padding interno */
+  border-radius: 5px; /* Arredonda os cantos dos campos */
+  border: 1px solid #ced4da; /* Adiciona borda ao campo */
+  font-size: 16px; /* Define o tamanho da fonte */
+  margin-top: 5px; /* Adiciona margem superior */
+}
+
+.products-form input:focus {
+  border-color: #80bdff; /* Altera a cor da borda quando o campo está em foco */
+  outline: none; /* Remove a borda de foco padrão do navegador */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Adiciona sombra ao redor do campo em foco */
+}
+
+.products-form button {
+  padding: 10px 15px; /* Adiciona padding interno ao botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  background-color: #28a745; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  font-size: 16px; /* Define o tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  margin-top: 10px; /* Adiciona margem superior */
+}
+
+.products-form button:hover {
+  background-color: #218838; /* Altera a cor do botão quando o cursor está sobre ele */
+}
+
+/* CSS para a lista de produtos */
+.products-list {
+  padding: 20px; /* Adiciona padding interno */
+  background-color: #ffffff; /* Cor de fundo da lista */
+  border-radius: 8px; /* Arredonda os cantos da lista */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra à lista */
+  border: 2px solid #dee2e6; /* Adiciona borda à lista */
+  margin: 0 auto; /* Remove margem superior e inferior e centraliza horizontalmente */
+  width: calc(100% - 40px); /* Ocupa toda a tela com uma margem de 20px em cada lado */
+}
+
+.products-list h2 {
+  text-align: center; /* Centraliza o texto do título */
+  margin-bottom: 20px; /* Adiciona margem inferior */
+  color: #343a40; /* Cor do texto */
+}
+
+.products-list table {
+  width: 100%; /* Ocupa toda a largura disponível */
+  border-collapse: collapse; /* Remove o espaço entre as bordas da tabela */
+}
+
+.products-list th,
+.products-list td {
+  padding: 10px; /* Adiciona padding interno às células */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-bottom: 1px solid #dee2e6; /* Adiciona borda inferior às células */
+}
+
+.products-list th {
+  background-color: #e9ecef; /* Cor de fundo das células de cabeçalho */
+  color: #495057; /* Cor do texto das células de cabeçalho */
+}
+
+.products-list tr:nth-child(even) {
+  background-color: #f8f9fa; /* Altera a cor de fundo para linhas pares */
+}
+
+.products-list button {
+  border: none; /* Remove a borda do botão */
+  background: none; /* Remove o fundo do botão */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  font-size: 18px; /* Define o tamanho da fonte */
+  color: #007bff; /* Cor do texto do botão */
+}
+
+.products-list button:hover {
+  color: #0056b3; /* Altera a cor do botão quando o cursor está sobre ele */
+}
+
+/* CSS para mensagens de erro */
+.error-message {
+  color: red; /* Cor do texto da mensagem de erro */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* CSS para o botão de adicionar produto */
+.add-product-button {
+  padding: 10px 15px; /* Adiciona padding interno ao botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  font-size: 16px; /* Define o tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  margin-top: 20px; /* Adiciona margem superior */
+  display: block; /* Exibe o botão como um bloco */
+  width: 200px; /* Define a largura do botão */
+  align-self: flex-start; /* Alinha o botão próximo à lista */
+}
+
+.add-product-button:hover {
+  background-color: #0056b3; /* Altera a cor do botão quando o cursor está sobre ele */
+}
+
+/* CSS para o modal */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do overlay da modal */
+  display: flex; /* Usa flexbox para centralizar o modal */
+  align-items: center; /* Alinha o modal verticalmente ao centro */
+  justify-content: center; /* Alinha o modal horizontalmente ao centro */
+  z-index: 1000; /* Define a camada do overlay para que fique acima de outros elementos */
+}
+
+.ReactModal__Content {
+  max-width: 600px; /* Define a largura máxima do conteúdo da modal */
+  width: 100%; /* Ocupa toda a largura disponível */
+  margin: 0 auto; /* Remove margem superior e inferior e centraliza horizontalmente */
+  padding: 20px; /* Adiciona padding interno */
+  border-radius: 8px; /* Arredonda os cantos do conteúdo */
+  background: #ffffff; /* Cor de fundo do conteúdo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao conteúdo */
+  position: relative; /* Define a posição relativa para controle do z-index */
+  z-index: 1001; /* Define a camada do conteúdo para que fique acima do overlay */
+}
+
+/* CSS para o conteúdo do formulário na modal */
+.modal-content form {
+  display: flex; /* Usa flexbox para organizar os itens dentro do formulário */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+  gap: 15px; /* Adiciona espaçamento entre os itens */
+}
+
+.modal-content form button {
+  margin-top: 10px; /* Adiciona margem superior ao botão */
+}
+
+.modal-buttons {
+  display: flex; /* Usa flexbox para organizar os botões */
+  gap: 15px; /* Adiciona espaçamento entre os botões */
+  margin-top: 20px; /* Adiciona margem superior */
+}
+
+.modal-buttons button {
+  flex-grow: 1; /* Faz com que os botões cresçam para ocupar o espaço disponível */
+  margin: 5px; /* Adiciona margem aos botões */
+}
+
+.modal-buttons .cancel-button {
+  background-color: #f44336; /* Cor de fundo do botão de cancelamento */
+  color: white; /* Cor do texto do botão de cancelamento */
+}
+
+.modal-buttons .submit-button {
+  margin-right: 15px; /* Adiciona margem à direita do botão de envio */
+}
